@@ -1,4 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "http"
+import { readProducts } from "../service/product.service"
 
 
 export const productController = (req: IncomingMessage, res: ServerResponse) => {
@@ -7,12 +8,7 @@ export const productController = (req: IncomingMessage, res: ServerResponse) => 
 
     if (url === '/products' && method === "GET") {
 
-        const products = [
-            {
-                id: 1,
-                name: 'Baby care'
-            }
-        ]
+        const products = readProducts()
         
         res.writeHead(200, { "content-type": "text/json" })
         res.end(JSON.stringify({ message: 'This is produts route', data: products }))

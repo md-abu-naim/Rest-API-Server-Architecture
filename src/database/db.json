@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Baby Shop"
+        "name": "Baby Shop",
+        "Price": 500
     }
 ]

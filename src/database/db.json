@@ -31,17 +31,17 @@
     },
     {
         "id": 3,
-        "name": "Coconut Hydrating Body Lotion",
-        "image": "https://i.ibb.co/example/product-3.jpg",
-        "category": "Body Care",
-        "price": 15.99,
-        "status": "Limited Stock",
-        "description": "A deeply moisturizing body lotion infused with coconut oil for soft skin.",
+        "name": "Radiance Vitamin C Face Serum",
+        "image": "https://i.ibb.co/example/product-1.jpg",
+        "category": "Face Care",
+        "price": 24.99,
+        "status": "In Stock",
+        "description": "A lightweight vitamin C serum that helps brighten dull skin and reduce dark spots.",
         "features": [
-            "24-hour hydration",
-            "Non-greasy texture",
-            "Smooth finish",
-            "Suitable for dry skin"
+            "Brightens skin tone",
+            "Reduces pigmentation",
+            "Lightweight formula",
+            "Suitable for all skin types"
         ]
     },
     {
@@ -121,8 +121,17 @@
     },
     {
         "id": 1778750070002,
-        "name": "hafiz",
+        "name": "Radiance Vitamin C Face Serum",
+        "image": "https://i.ibb.co/example/product-1.jpg",
+        "category": "Face Care",
+        "price": 24.99,
+        "status": "In Stock",
         "description": "A lightweight vitamin C serum that helps brighten dull skin and reduce dark spots.",
-        "price": 24.99
+        "features": [
+            "Brightens skin tone",
+            "Reduces pigmentation",
+            "Lightweight formula",
+            "Suitable for all skin types"
+        ]
     }
 ]

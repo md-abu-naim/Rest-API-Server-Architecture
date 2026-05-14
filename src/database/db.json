@@ -1,7 +1,122 @@
 [
-    {
-        "id": 1,
-        "name": "Baby Shop",
-        "Price": 500
-    }
+  {
+    "id": 1,
+    "name": "Radiance Vitamin C Face Serum",
+    "image": "https://i.ibb.co/example/product-1.jpg",
+    "category": "Face Care",
+    "price": 24.99,
+    "status": "In Stock",
+    "description": "A lightweight vitamin C serum that helps brighten dull skin and reduce dark spots.",
+    "features": [
+      "Brightens skin tone",
+      "Reduces pigmentation",
+      "Lightweight formula",
+      "Suitable for all skin types"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Herbal Repair Shampoo",
+    "image": "https://i.ibb.co/example/product-2.jpg",
+    "category": "Hair Care",
+    "price": 18.5,
+    "status": "In Stock",
+    "description": "A nourishing herbal shampoo designed to strengthen weak and damaged hair.",
+    "features": [
+      "Reduces hair fall",
+      "Deep cleansing",
+      "Paraben free",
+      "Natural herbal extracts"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Coconut Hydrating Body Lotion",
+    "image": "https://i.ibb.co/example/product-3.jpg",
+    "category": "Body Care",
+    "price": 15.99,
+    "status": "Limited Stock",
+    "description": "A deeply moisturizing body lotion infused with coconut oil for soft skin.",
+    "features": [
+      "24-hour hydration",
+      "Non-greasy texture",
+      "Smooth finish",
+      "Suitable for dry skin"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Berry Glow Lip Balm",
+    "image": "https://i.ibb.co/example/product-4.jpg",
+    "category": "Lip Care",
+    "price": 9.99,
+    "status": "In Stock",
+    "description": "A fruity lip balm that keeps lips soft, hydrated, and naturally glossy.",
+    "features": [
+      "Long-lasting moisture",
+      "Natural berry scent",
+      "Soft glossy finish",
+      "Pocket-friendly size"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Aloe Vera Soothing Gel",
+    "image": "https://i.ibb.co/example/product-5.jpg",
+    "category": "Face Care",
+    "price": 12.75,
+    "status": "Sold Out",
+    "description": "Refreshing aloe vera gel that calms irritated skin and provides instant hydration.",
+    "features": [
+      "Cooling effect",
+      "Fast absorption",
+      "Multi-purpose skincare",
+      "Alcohol free"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Keratin Smooth Hair Mask",
+    "image": "https://i.ibb.co/example/product-6.jpg",
+    "category": "Hair Care",
+    "price": 27.0,
+    "status": "In Stock",
+    "description": "An intensive keratin hair treatment mask for silky and manageable hair.",
+    "features": [
+      "Deep conditioning",
+      "Controls frizz",
+      "Adds shine",
+      "Salon-like results"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Lavender Relaxing Body Wash",
+    "image": "https://i.ibb.co/example/product-7.jpg",
+    "category": "Body Care",
+    "price": 19.49,
+    "status": "In Stock",
+    "description": "Gentle lavender body wash that cleanses skin while providing a calming aroma.",
+    "features": [
+      "Refreshing cleanse",
+      "Relaxing fragrance",
+      "Soft foam texture",
+      "Daily use formula"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Rose Tint Lip Oil",
+    "image": "https://i.ibb.co/example/product-8.jpg",
+    "category": "Lip Care",
+    "price": 13.25,
+    "status": "Limited Stock",
+    "description": "Hydrating lip oil with a soft rose tint for naturally glossy lips.",
+    "features": [
+      "Natural shine",
+      "Lightweight texture",
+      "Hydrating formula",
+      "Elegant rose scent"
+    ]
+  }
 ]

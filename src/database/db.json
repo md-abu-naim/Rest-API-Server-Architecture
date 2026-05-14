@@ -30,21 +30,6 @@
         ]
     },
     {
-        "id": 3,
-        "name": "Radiance Vitamin C Face Serum",
-        "image": "https://i.ibb.co/example/product-1.jpg",
-        "category": "Face Care",
-        "price": 24.99,
-        "status": "In Stock",
-        "description": "A lightweight vitamin C serum that helps brighten dull skin and reduce dark spots.",
-        "features": [
-            "Brightens skin tone",
-            "Reduces pigmentation",
-            "Lightweight formula",
-            "Suitable for all skin types"
-        ]
-    },
-    {
         "id": 4,
         "name": "Berry Glow Lip Balm",
         "image": "https://i.ibb.co/example/product-4.jpg",
@@ -117,21 +102,6 @@
             "Lightweight texture",
             "Hydrating formula",
             "Elegant rose scent"
-        ]
-    },
-    {
-        "id": 1778750070002,
-        "name": "Radiance Vitamin C Face Serum",
-        "image": "https://i.ibb.co/example/product-1.jpg",
-        "category": "Face Care",
-        "price": 24.99,
-        "status": "In Stock",
-        "description": "A lightweight vitamin C serum that helps brighten dull skin and reduce dark spots.",
-        "features": [
-            "Brightens skin tone",
-            "Reduces pigmentation",
-            "Lightweight formula",
-            "Suitable for all skin types"
         ]
     }
 ]

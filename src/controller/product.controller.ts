@@ -21,6 +21,11 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
     else if (method === 'GET' && id !== null) {
         const products = readProducts()
         const product = products.find((p: IProduct) => p.id === id)
+        
+        if(!product){
+            res.writeHead(404, { "content-type": "text/json" })
+            res.end(JSON.stringify({ message: 'Product not found', data: null }))
+        }
 
         res.writeHead(200, { "content-type": "text/json" })
         res.end(JSON.stringify({ message: 'Product retrived succefully', data: product }))
@@ -57,5 +62,21 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         insterProduct(products)
         res.writeHead(200, { "content-type": "text/json" })
         res.end(JSON.stringify({ message: 'Product update succefully', data: products[index]}))
+    }
+    else if(method === 'DELETE' && id !== null){
+        const products = readProducts()
+
+        const index = products.findIndex((p: IProduct) => p.id === id)
+
+        if (index < 0) {
+            res.writeHead(404, { "content-type": "text/json" })
+            res.end(JSON.stringify({ message: 'Product not found', data: null }))
+        }
+
+        products.splice(index, 1)
+
+        insterProduct(products)
+        res.writeHead(200, { "content-type": "text/json" })
+        res.end(JSON.stringify({ message: 'Product Delete succefully', data: null}))
     }
 } 

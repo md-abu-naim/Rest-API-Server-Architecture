@@ -11,3 +11,8 @@ export const readProducts = () => {
 
     return JSON.parse(products)
 }
+
+
+export const insterProduct = (payload: any) => {
+    fs.writeFileSync(filePath, JSON.stringify(payload))
+}

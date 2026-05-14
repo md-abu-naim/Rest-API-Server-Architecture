@@ -2,6 +2,7 @@ import type { IncomingMessage, ServerResponse } from "http"
 import { insterProduct, readProducts } from "../service/product.service"
 import type { IProduct } from "../types/product.type"
 import { parseBody } from "../utility/parseBody"
+import { sendResponse } from "../utility/sendResponse"
 
 
 export const productController = async (req: IncomingMessage, res: ServerResponse) => {
@@ -15,20 +16,17 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
 
         const products = readProducts()
 
-        res.writeHead(200, { "content-type": "text/json" })
-        res.end(JSON.stringify({ message: 'This is produts route', data: products }))
+        sendResponse(res, 200, true, 'This is produts route', products)
     }
     else if (method === 'GET' && id !== null) {
         const products = readProducts()
         const product = products.find((p: IProduct) => p.id === id)
-        
+
         if(!product){
-            res.writeHead(404, { "content-type": "text/json" })
-            res.end(JSON.stringify({ message: 'Product not found', data: null }))
+            sendResponse(res, 404, true, 'Product not found', null)
         }
 
-        res.writeHead(200, { "content-type": "text/json" })
-        res.end(JSON.stringify({ message: 'Product retrived succefully', data: product }))
+        sendResponse(res, 200, true, 'Product retrived succefully', products)
     }
     else if (method === "POST" && url === '/products') {
         const body = await parseBody(req)
@@ -43,8 +41,7 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
 
 
         insterProduct(products)
-        res.writeHead(200, { "content-type": "text/json" })
-        res.end(JSON.stringify({ message: 'Product retrived succefully', data: products }))
+        sendResponse(res, 200, true, 'Product retrived succefully', products)
     }
     else if (method === 'PUT' && id !== null) {
         const body = await parseBody(req)
@@ -53,15 +50,13 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         const index = products.findIndex((p: IProduct) => p.id === id)
 
         if (index < 0) {
-            res.writeHead(404, { "content-type": "text/json" })
-            res.end(JSON.stringify({ message: 'Product not found', data: null }))
+            sendResponse(res, 404, true, 'product not found', products)
         }
 
         products[index] = {id: products[index].id, ...body}
 
         insterProduct(products)
-        res.writeHead(200, { "content-type": "text/json" })
-        res.end(JSON.stringify({ message: 'Product update succefully', data: products[index]}))
+        sendResponse(res, 200, true, 'Product update successfully', products)
     }
     else if(method === 'DELETE' && id !== null){
         const products = readProducts()
@@ -69,14 +64,12 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         const index = products.findIndex((p: IProduct) => p.id === id)
 
         if (index < 0) {
-            res.writeHead(404, { "content-type": "text/json" })
-            res.end(JSON.stringify({ message: 'Product not found', data: null }))
+            sendResponse(res, 404, true, 'Product not found', products)
         }
 
         products.splice(index, 1)
 
         insterProduct(products)
-        res.writeHead(200, { "content-type": "text/json" })
-        res.end(JSON.stringify({ message: 'Product Delete succefully', data: null}))
+        sendResponse(res, 200, true, 'Product delete successfully', products)
     }
 } 

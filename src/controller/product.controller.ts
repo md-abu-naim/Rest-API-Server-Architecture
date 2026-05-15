@@ -23,10 +23,10 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         const product = products.find((p: IProduct) => p.id === id)
 
         if(!product){
-            sendResponse(res, 404, true, 'Product not found', null)
+            return sendResponse(res, 404, false, 'Product not found', null)
         }
 
-        sendResponse(res, 200, true, 'Product retrived succefully', products)
+        sendResponse(res, 200, true, 'Product retrived succefully', product)
     }
     else if (method === "POST" && url === '/products') {
         const body = await parseBody(req)
@@ -50,7 +50,7 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         const index = products.findIndex((p: IProduct) => p.id === id)
 
         if (index < 0) {
-            sendResponse(res, 404, true, 'product not found', products)
+            sendResponse(res, 404, false, 'product not found', products)
         }
 
         products[index] = {id: products[index].id, ...body}
@@ -64,7 +64,7 @@ export const productController = async (req: IncomingMessage, res: ServerRespons
         const index = products.findIndex((p: IProduct) => p.id === id)
 
         if (index < 0) {
-            sendResponse(res, 404, true, 'Product not found', products)
+            sendResponse(res, 404, false, 'Product not found', products)
         }
 
         products.splice(index, 1)
